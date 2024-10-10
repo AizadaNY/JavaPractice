@@ -13,12 +13,23 @@ public class Student extends Person {
         this.studentId = studentId;
     }
 
-
     public void enrollCourses(String[] courses){
      enrolledCourses=courses;
     }
 
     public void enrollCourses(String course){
+
+    }
+
+    public double getTuition() {
+        return tuition;
+    }
+
+    public void setTuition(double tuition) {
+        this.tuition = tuition;
+    }
+
+    public void calculateTuition(){
 
     }
 }
