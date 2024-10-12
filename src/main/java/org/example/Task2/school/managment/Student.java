@@ -29,7 +29,15 @@ public class Student extends Person {
         this.tuition = tuition;
     }
 
-    public void calculateTuition(){
+    public String[] getEnrolledCourses() {
+        return enrolledCourses;
+    }
 
+    public void setEnrolledCourses(String[] enrolledCourses) {
+        this.enrolledCourses= enrolledCourses;
+    }
+
+    public void calculateTuition(){
+        double v = getTuition() * (getEnrolledCourses().length);
     }
 }
