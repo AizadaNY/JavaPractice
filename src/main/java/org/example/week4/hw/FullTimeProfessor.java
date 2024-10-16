@@ -6,4 +6,14 @@ public class FullTimeProfessor extends Professor{
     public void calculateSalary() {
         super.calculateSalary();
     }
+
+    @Override
+    public void conductLecture() {
+
+    }
+
+    @Override
+    public void gradeStudents() {
+
+    }
 }

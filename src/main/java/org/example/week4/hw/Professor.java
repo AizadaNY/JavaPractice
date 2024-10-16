@@ -1,6 +1,6 @@
 package org.example.week4.hw;
 
-public abstract class Professor implements Teach{
+public abstract class Professor implements Teach, Evaluatable{
 
     private String name;
     private double salary;
