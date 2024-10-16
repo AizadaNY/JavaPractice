@@ -1,16 +1,19 @@
 package org.example.week4.hw;
 
-public abstract class Professor implements Teach, Evaluatable{
+public abstract class Professor implements Teach, Evaluatable {
 
     private String name;
     private double salary;
     private Department departmentName;
 
-    public void teachCourse(){
+   public Professor(String name){
+       this.name=name;
+   }
+    public void teachCourse() {
 
     }
 
-    public void calculateSalary(){
+    public void calculateSalary() {
 
     }
 

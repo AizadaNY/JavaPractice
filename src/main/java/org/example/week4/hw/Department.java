@@ -1,25 +1,27 @@
 package org.example.week4.hw;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Department {
 
-    private String departmentName;
+    private String name;
     private List<Professor> professors;
 
-    public String getDepartmentName() {
-        return departmentName;
+    public Department(String name){
+        this.name=name;
+        this.professors=new ArrayList<>();
     }
 
-    public void setDepartmentName(String departmentName) {
-        this.departmentName = departmentName;
-    }
+   public void addProfessor(Professor professor){
+        professors.add(professor);
+   }
 
-    public List<Professor> getProfessors() {
-        return professors;
-    }
+   public void getProfessorsList(){
+        for(Professor professor:professors){
+            System.out.println(professor.getName());
+        }
 
-    public void setProfessors(List<Professor> professors) {
-        this.professors = professors;
-    }
+   }
+
 }

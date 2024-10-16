@@ -2,6 +2,10 @@ package org.example.week4.hw;
 
 public class AdjunctProfessor extends Professor {
 
+    public AdjunctProfessor(String name) {
+        super(name);
+    }
+
     @Override
     public void calculateSalary() {
         super.calculateSalary();

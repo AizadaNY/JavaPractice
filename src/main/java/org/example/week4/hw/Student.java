@@ -5,30 +5,24 @@ import java.util.List;
 public class Student {
 
     private String name;
-    private int id;
+    private static int id = 0;
     List<Course> registeredCourses;
+
+    public Student(String name) {
+        this.name = name;
+        id++;
+    }
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public List<Course> getRegisteredCourses() {
-        return registeredCourses;
-    }
-
-    public void setRegisteredCourses(List<Course> registeredCourses) {
-        this.registeredCourses = registeredCourses;
+    public void printStudentInfo() {
+        System.out.println("Student name is " + getName()
+                + " id is " + getId());
     }
 }
