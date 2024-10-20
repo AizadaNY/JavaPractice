@@ -2,13 +2,16 @@ package org.example.week4.hw;
 
 public class AdjunctProfessor extends Professor {
 
-    public AdjunctProfessor(String name) {
-        super(name);
+    private int coursesTaught;
+
+    public AdjunctProfessor(String name,String department,int coursesTaught) {
+        super(name,department);
+        this.coursesTaught=coursesTaught;
     }
 
     @Override
-    public void calculateSalary() {
-        super.calculateSalary();
+    public double calculateSalary() {
+        return coursesTaught*1500;
     }
 
     @Override

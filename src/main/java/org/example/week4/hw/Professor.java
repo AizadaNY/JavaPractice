@@ -4,40 +4,26 @@ public abstract class Professor implements Teach, Evaluatable {
 
     private String name;
     private double salary;
-    private Department departmentName;
+    private String department;
 
-   public Professor(String name){
-       this.name=name;
-   }
-    public void teachCourse() {
-
-    }
-
-    public void calculateSalary() {
-
+    public Professor(String name, String department) {
+        this.name = name;
+        this.department = department;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getDepartment() {
+        return department;
     }
 
-    public double getSalary() {
-        return salary;
+    public abstract double calculateSalary();
+
+    public void teachCourse() {
+        System.out.println(name + "is teaching the " + department + " department");
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
 
-    public Department getDepartmentName() {
-        return departmentName;
-    }
-
-    public void setDepartmentName(Department departmentName) {
-        this.departmentName = departmentName;
-    }
 }
