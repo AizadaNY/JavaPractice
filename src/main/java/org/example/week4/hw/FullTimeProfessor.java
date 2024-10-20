@@ -4,23 +4,15 @@ public class FullTimeProfessor extends Professor{
 
     private double monthlySalary;
 
-    public FullTimeProfessor(String name,String department,String monthlySalary) {
+    public FullTimeProfessor(String name,String department,double monthlySalary) {
         super(name,department);
         this.monthlySalary=monthlySalary;
     }
 
     @Override
-    public void calculateSalary() {
-        super.calculateSalary();
+    public double calculateSalary() {
+       return monthlySalary;
     }
 
-    @Override
-    public void conductLecture() {
 
-    }
-
-    @Override
-    public void gradeStudents() {
-
-    }
 }

@@ -14,15 +14,14 @@ public class Course {
         this.students = new ArrayList<>();
     }
 
+    public String getCourseName(){
+        return courseName;
+    }
+
     public void assignCourse(Student student) {
         students.add(student);
     }
 
-    public void listStudents(){
-        for (Student student:students){
-            System.out.println(student.getName());
-        }
-    }
 
 
 }

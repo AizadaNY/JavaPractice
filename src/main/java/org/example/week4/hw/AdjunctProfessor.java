@@ -14,13 +14,5 @@ public class AdjunctProfessor extends Professor {
         return coursesTaught*1500;
     }
 
-    @Override
-    public void conductLecture() {
 
-    }
-
-    @Override
-    public void gradeStudents() {
-
-    }
 }
