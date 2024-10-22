@@ -36,7 +36,7 @@ public class Department {
 
    public void listCourses(){
         for(Course course:courses){
-            System.out.println("Course "+ course.getCourseName);
+            System.out.println("Course "+ course.getCourseName());
         }
    }
 

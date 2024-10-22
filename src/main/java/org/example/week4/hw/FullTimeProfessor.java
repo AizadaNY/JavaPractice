@@ -15,4 +15,13 @@ public class FullTimeProfessor extends Professor{
     }
 
 
+    @Override
+    public void gradeStudents() {
+
+    }
+
+    @Override
+    public void conductLecture() {
+
+    }
 }

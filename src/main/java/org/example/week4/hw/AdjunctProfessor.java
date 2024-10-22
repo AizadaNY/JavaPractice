@@ -15,4 +15,13 @@ public class AdjunctProfessor extends Professor {
     }
 
 
+    @Override
+    public void gradeStudents() {
+
+    }
+
+    @Override
+    public void conductLecture() {
+
+    }
 }

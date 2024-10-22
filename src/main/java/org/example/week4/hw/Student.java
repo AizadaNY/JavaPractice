@@ -1,28 +1,33 @@
 package org.example.week4.hw;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Student {
 
-    private String name;
-    private static int id = 0;
-    List<Course> registeredCourses;
+    private String studentName;
+    private int studentID;
+    private Map<Course,Integer> grades;
 
-    public Student(String name) {
-        this.name = name;
-        id++;
+    public Student(String studentName, int studentID) {
+        this.studentName = studentName;
+        this.studentID = studentID;
+        grades = new HashMap<>();
     }
 
-    public String getName() {
-        return name;
+    public void addGrade(Course course, int grade) {
+        grades.put(course, grade);
     }
 
-    public int getId() {
-        return id;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void printStudentInfo() {
-        System.out.println("Student name is " + getName()
-                + " id is " + getId());
+    public void printGradeReport() {
+        System.out.println("Grade report for " + studentName);
+        for (Course course : grades.keySet()) {
+            System.out.println("Course " + course + " grade is " + grades.get(course));
+        }
     }
 }
