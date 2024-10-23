@@ -2,6 +2,7 @@ package org.example.week5.hw;
 
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class CourseRegistration {
 
@@ -14,7 +15,9 @@ public class CourseRegistration {
                 throw new CourseFullException();
             }
         } catch (NullPointerException exception) {
-          System.out.println("");
+            exception.printStackTrace();
         }
     }
+
+
 }
