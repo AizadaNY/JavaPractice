@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CourseRegistration {
 
-    ArrayList<Student> registeredStudents;
+    ArrayList<Student> registeredStudents=new ArrayList<>();
 
     public void registerStudent(Student student) {
         try {
