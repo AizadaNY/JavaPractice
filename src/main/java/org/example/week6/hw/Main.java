@@ -13,7 +13,7 @@ public class Main {
     public static <T> void sort(List<T> list, Comparator<T> comparator){
 
         for (int i = 0; i < list.size(); i++) {
-
+//
         }
     }
 }
