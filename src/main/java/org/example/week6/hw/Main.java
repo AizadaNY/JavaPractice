@@ -1,5 +1,6 @@
 package org.example.week6.hw;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -31,14 +32,25 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
+        List<Integer> intList = new ArrayList<>();
+        intList.add(5);
+        intList.add(10);
+        intList.add(1);
+        intList.add(7);
+        sort(intList, Comparator.naturalOrder());
+        System.out.println(intList);
 
+
+        List<String> stringList = new ArrayList<>();
+        stringList.add("Charlie");
+        stringList.add("Alice");
+        stringList.add("Bob");
+        sort(stringList,Comparator.comparing(String::length));
+        System.out.println(stringList);
 
     }
 
     public static <T> void sort(List<T> list, Comparator<T> comparator){
-
-        for (int i = 0; i < list.size(); i++) {
-//
-        }
+        list.sort(comparator);
     }
 }
