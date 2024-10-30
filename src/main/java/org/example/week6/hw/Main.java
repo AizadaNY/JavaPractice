@@ -1,5 +1,7 @@
 package org.example.week6.hw;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -53,4 +55,10 @@ public class Main {
     public static <T> void sort(List<T> list, Comparator<T> comparator){
         list.sort(comparator);
     }
+
+    @Test
+    public void test1(){
+
+    }
+
 }
