@@ -6,6 +6,12 @@ public class Student {
     private String name;
     private double grade;
 
+    public Student(int id, String name, double grade) {
+        this.id = id;
+        this.name = name;
+        this.grade = grade;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -32,8 +38,6 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student name: " + name +
-                "id: " + id +
-                "grade: " + grade;
+        return "id: " + id + " Student name: " + name + " grade: " + grade;
     }
 }
