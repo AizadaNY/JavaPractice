@@ -1,2 +1,5 @@
 101,John Doe,88.5
+102,Jane Smith,92.0
 103,Emily White,80.0
+104,Emil White,78.3
+105,Eric Rose,91.3

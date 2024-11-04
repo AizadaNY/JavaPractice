@@ -2,6 +2,7 @@ package org.example.week7;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Main {
@@ -27,10 +28,14 @@ public class Main {
         System.out.println("This is after updating data");
         List<Student> students2 = loadStudentsFromFile(path);
         displayStudents(students2);
-        deleteStudent(102, path);
-        System.out.println("This is after deleting data");
+//        deleteStudent(102, path);
+//        System.out.println("This is after deleting data");
         List<Student> students3 = loadStudentsFromFile(path);
         displayStudents(students3);
+        sortStudentsByGrade(students3, "");
+        System.out.println("This is after sort data");
+        displayStudents(students3);
+
 
     }
 
@@ -90,16 +95,13 @@ public class Main {
         saveStudentsToFile(filePath, students);
     }
 
-    public void sortStudentsByGrade(List<Student> students,String order){
-        if(order.equalsIgnoreCase("desc")){
-
-        }else{
-            for (int i = 0; i < students.size(); i++) {
-             if(students.get(i).getGrade()>students.get(i).getGrade())   {
-                 students.get(i)=students.get(i+1);
-             }
-            }
+    public static void sortStudentsByGrade(List<Student> students, String order) {
+        if (order.equalsIgnoreCase("desc")) {
+            students.sort(Comparator.comparing(Student::getGrade).reversed());
+        } else {
+            students.sort(Comparator.comparing(Student::getGrade));
         }
+
 
     }
 
