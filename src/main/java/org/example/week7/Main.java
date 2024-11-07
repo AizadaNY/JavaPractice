@@ -14,12 +14,14 @@ public class Main {
         Student s3 = new Student(103, "Emily White", 76.3);
         Student s4 = new Student(104, "Emil White", 78.3);
         Student s5 = new Student(105, "Eric Rose", 91.3);
+        Student s6 = new Student(107, "Eric Bill", 90.3);
         List<Student> students = new ArrayList<>();
         students.add(s1);
         students.add(s2);
         students.add(s3);
         students.add(s4);
         students.add(s5);
+        students.add(s6);
 
         saveStudentsToFile(path, students);
         List<Student> students1 = loadStudentsFromFile(path);
