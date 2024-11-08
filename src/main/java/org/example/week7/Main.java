@@ -30,15 +30,13 @@ public class Main {
         System.out.println("This is after updating data");
         List<Student> students2 = loadStudentsFromFile(path);
         displayStudents(students2);
-//        deleteStudent(102, path);
-//        System.out.println("This is after deleting data");
+        deleteStudent(102, path);
+        System.out.println("This is after deleting data");
         List<Student> students3 = loadStudentsFromFile(path);
         displayStudents(students3);
         sortStudentsByGrade(students3, "");
         System.out.println("This is after sort data");
         displayStudents(students3);
-
-
     }
 
     public static void saveStudentsToFile(String filePath, List<Student> students) throws IOException {
@@ -63,10 +61,9 @@ public class Main {
                         Integer.parseInt(studentInfo[0]),
                         studentInfo[1],
                         Double.parseDouble(studentInfo[2])));
-
             }
         } catch (NullPointerException ex) {
-
+            ex.printStackTrace();
         }
         return students;
     }
@@ -103,9 +100,6 @@ public class Main {
         } else {
             students.sort(Comparator.comparing(Student::getGrade));
         }
-
-
     }
-
 
 }
