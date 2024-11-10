@@ -8,23 +8,41 @@ public class DBConnection {
 
 
 
-    {
 
 
+   public void executeQuery(String sqlQuery){
+       Statement statement = null;
+       try {
+           statement = getConnection(url).createStatement();
+           ResultSet resultSet = statement.executeQuery(sqlQuery);
+       } catch (SQLException e) {
+           throw new RuntimeException(e);
+       }
 
-    }
+   }
 
-    private Connection getConnection(String url){
-        Connection connection;
+    public void executeQueryReturnResult(String sqlQuery){
+        Statement statement = null;
         try {
-            connection = DriverManager.getConnection(url);
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("");
+            statement = getConnection(url).createStatement();
+            ResultSet resultSet = statement.executeQuery(sqlQuery);
             while (resultSet.next()){
                 resultSet.getRow();
             }
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+
+    private Connection getConnection(String url){
+       Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(url);
+
+        } catch (SQLException e) {
             System.out.println("An error occurred while connecting SQLite database");
         }
+        return connection;
     }
 }
