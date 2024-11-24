@@ -6,16 +6,28 @@ public class Library {
 
     private ArrayList<Book> books;
 
-    public void addBook(){
-
+    public void addBook(Book book) {
+        books.add(book);
     }
 
-    public boolean isAvailable(){
-
+    public Book getBookByTitle(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equalsIgnoreCase(title)) {
+                return book;
+            }
+        }
+        return null;
     }
 
-    public void displayAvailableBooks(){
-
+    public void displayAvailableBooks() {
+        System.out.println("Available books: ");
+        for (Book book : books) {
+            if (book.isAvailable()) {
+                System.out.println("- " + book.getTitle());
+            }
+        }
     }
+
+
 
 }
