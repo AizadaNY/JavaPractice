@@ -23,7 +23,7 @@ public class Book {
         return false;
     }
 
-    public synchronized boolean returnBook(String title){
+    public synchronized boolean returnBook(){
         isAvailable=true;
         System.out.println("Book is returned "+ title);
         return true;
