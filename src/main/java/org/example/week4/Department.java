@@ -1,4 +1,4 @@
-package org.example.week4.hw;
+package org.example.week4;
 
 import java.util.ArrayList;
 import java.util.List;

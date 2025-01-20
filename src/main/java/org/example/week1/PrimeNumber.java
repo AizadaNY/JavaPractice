@@ -1,4 +1,4 @@
-package org.example.week1.hw;
+package org.example.week1;
 
 public class PrimeNumber {
 

@@ -1,4 +1,4 @@
-package org.example.week6.hw;
+package org.example.week6;
 
 import org.junit.Test;
 

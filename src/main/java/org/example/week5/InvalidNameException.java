@@ -1,4 +1,4 @@
-package org.example.week5.hw;
+package org.example.week5;
 
 public class InvalidNameException extends RuntimeException{
 

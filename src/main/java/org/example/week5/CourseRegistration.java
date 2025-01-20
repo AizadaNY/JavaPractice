@@ -1,8 +1,7 @@
-package org.example.week5.hw;
+package org.example.week5;
 
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class CourseRegistration {
 

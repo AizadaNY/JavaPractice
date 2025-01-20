@@ -1,4 +1,4 @@
-package org.example.week4.hw;
+package org.example.week4;
 
 public abstract class Professor implements Teach, Evaluatable {
 
